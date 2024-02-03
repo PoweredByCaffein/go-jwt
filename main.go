@@ -16,6 +16,11 @@ import (
 
 func main() {
 
+	// Start CMD
+	cmd.Execute()
+}
+
+func init() {
 	// Setup logger
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 
@@ -25,6 +30,4 @@ func main() {
 		log.Fatal().Msgf("Error loading .env file: %s", err.Error())
 	}
 
-	// Start CMD
-	cmd.Execute()
 }

@@ -2,3 +2,4 @@
 .env
 .idea/
 cmd/test.go
+go-jwt
